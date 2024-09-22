@@ -1,0 +1,1 @@
+- This is a repository containing all the python problems of class, function, and array which I solved as a beginner-level, during my first year at university. 
