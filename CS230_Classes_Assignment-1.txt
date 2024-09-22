@@ -1,0 +1,81 @@
+#Create Three Python Modules - One for classes, one for your functions and one for your main program
+
+#In your classes module: 
+#Define a Student class with a initialization method that initializes first_name, last_name and middle_name.
+#Define a method that returns a neatly formatted string of the Student's information. 
+#Include a get_full_name method in the Student class to return the full name of the student, including the middle name if provided. 
+#This method should handle cases where the student does not have a middle name. You might consider a conditional (if-else statement) to satisfy this requirement. 
+#Your method should return either (first_name, middle_name, last_name) or (first_name, last_name). 
+
+#Define the Undergrad Class (Inherits from Student):
+#Create a class named Undergrad that inherits from the Student class.
+#Implement an __init__ method in the Undergrad class to initialize attributes such as level, major, and concentration, in addition to those inherited from Student.
+#Add a method named create_undergrad_student to the Undergrad class to format and return the information of an undergraduate student.
+
+#Define the Grad_Student Class (Also Inherits from Student):
+#Create a class named Grad_Student as a subclass of Student.
+#Implement an __init__ method in the Grad_Student class to initialize attributes such as level, major, concentration, and thesis topic, in addition to those inherited from Student.
+#Add a method named create_grad_student to the Grad_Student class to format and return the information of a graduate student.
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#In your functions module: 
+
+#Function Definition and User Input:
+#Define a non-parameterized function named create_student.
+#Display a prompt asking the user to enter the student's level as either undergrad or grad_student using input().
+#Convert the input to lowercase using .lower() to ensure case-insensitivity.
+
+#Processing for Undergraduate Students:
+#If the student level entered is 'undergrad' (after converting to lowercase), set the level variable to the inputted student_level.
+#Prompt the user to enter the first name, last name, middle name, major, and concentration using input(). Convert each input to lowercase.
+#Store the entered values in respective variables('level', 'first_name', 'last_name', 'middle_name', 'major', 'concentration').
+#Return a dictionary where keys are level, first_name, last_name, middle_name, major, and concentration. What will your values be? They are right in front of your face. 
+
+#Processing for Graduate Students:
+#If the student level is 'grad_student' (after converting to lowercase), set the level variable to student_level.
+#Prompt the user to enter the first name, last name, middle name, major, concentration, and thesis topic using input(). Convert each input to lowercase.
+#Store the entered values in respective variables ('level', 'first_name', 'last_name', 'middle name', 'major', 'concentration', 'thesis_topic').
+#Return a dictionary where keys are level, first_name, last_name, middle_name, major, concentration, and thesis_topic. What will your values be? They are right in front of your face. 
+
+#If the entered student level is neither 'undergrad' nor 'grad_student', return None.
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#In you main module: 
+
+#Import Statements:
+#Begin by importing the required classes and functions using the import statements provided:
+#Import Undergrad and Grad_Student classes from class_module.
+#Import the create_student function from functions_module.
+
+#Main Function Definition:
+#Define a function named main.
+
+#Calling create_student Function:
+#Inside the main function, call the create_student function from functions_module to prompt the user to enter student information.
+#Store the returned student information in a variable named student_info.
+
+#Checking for Valid Student Information:
+#Check if the student_info variable is not None, which indicates that valid student information was entered.
+
+#Creating Undergraduate Student Object:
+#If the student level in student_info is 'undergrad':
+#Create an instance of the Undergrad class using the provided student information (level, first name, last name, middle name, major, concentration).
+    #HINT - (student_info['level'], student_info['first_name'],) REMEMBER ONE WAY TO UPDATE A DICTIONARY????
+#Print a message indicating the creation of a new undergraduate student.
+#Call the create_undergrad_student method on the Undergrad instance and print the formatted student information.
+
+#Creating Graduate Student Object:**
+#If the student level in student_info is 'grad_student':
+#Create an instance of the Grad_Student class using the provided student information (level, first name, last name, middle name, major, concentration, thesis topic).
+    #HINT - (student_info['level'], student_info['first_name'],) REMEMBER ONE WAY TO UPDATE A DICTIONARY????
+#Print a message indicating the creation of a new graduate student.
+#Call the create_grad_student method on the Grad_Student instance and print the formatted student information.
+
+#Handling Invalid Student Information:
+#If the student_info variable is None, print an error message indicating that invalid student information was entered.
+
+#Main Function Invocation:
+#At the end of the script, ensure that the main function is invoked only when the script is run directly (not imported) using the condition if __name__ == '__main__'.
